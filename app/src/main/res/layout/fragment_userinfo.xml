@@ -111,10 +111,11 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifHoTen"
                             android:textSize="@dimen/textsizeInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nguyễn Văn Phong"
+                            android:hint="Nguyễn Văn Phong"
                             android:textStyle="bold"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
@@ -133,6 +134,7 @@
                         android:gravity="center|left">
 
                         <TextView
+
                             android:textSize="@dimen/textsizeInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -146,12 +148,13 @@
                         android:gravity="center|right">
 
                         <TextView
-                            android:textSize="@dimen/textsizeInfo"
-                            android:textStyle="bold"
+                            android:id="@+id/txtifMssv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1451TT0201"
-                            android:textColor="@color/colorUserInfoRight" />
+                            android:hint="1451TT0201"
+                            android:textColor="@color/colorUserInfoRight"
+                            android:textSize="@dimen/textsizeInfo"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -181,11 +184,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifphone"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="01656836446"
+                            android:hint="01656836446"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
                 </LinearLayout>
@@ -216,11 +220,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifBir"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="22/11/1996"
+                            android:hint="22/11/1996"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
                 </LinearLayout>
@@ -251,11 +256,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifPlaceOfBirth"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TP.HCM"
+                            android:hint="TP.HCM"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
                 </LinearLayout>
@@ -280,17 +286,19 @@
                     </LinearLayout>
 
                     <LinearLayout
+
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifGender"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nam"
+                            android:hint="Nam"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
                 </LinearLayout>
@@ -321,11 +329,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifNation"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kinh"
+                            android:hint="Kinh"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
 
@@ -357,11 +366,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifAddress"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Số 46, Đường Lô C, KP 3"
+                            android:hint="Số 46, Đường Lô C, KP 3"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
 
@@ -392,11 +402,12 @@
                         android:gravity="center|right">
 
                         <TextView
+                            android:id="@+id/txtifClass"
                             android:textSize="@dimen/textsizeInfo"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="CD14TT1"
+                            android:hint="CD14TT1"
                             android:textColor="@color/colorUserInfoRight" />
                     </LinearLayout>
 

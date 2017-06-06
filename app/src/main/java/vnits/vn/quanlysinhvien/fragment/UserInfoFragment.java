@@ -4,7 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.Html;
@@ -22,24 +22,55 @@ import vnits.vn.quanlysinhvien.ChangePassActivity;
 import vnits.vn.quanlysinhvien.Database.MyDatabaseAccess;
 import vnits.vn.quanlysinhvien.LoginActivity;
 import vnits.vn.quanlysinhvien.R;
+import vnits.vn.quanlysinhvien.Task.TaskUserInfo;
 
 
-public class UserInfoFragment extends Fragment{
+public class UserInfoFragment extends Fragment {
 
-    LinearLayout btnChangeInfo,btnChangePass,btnLogout,btnCancel;
+    LinearLayout btnChangeInfo, btnChangePass, btnLogout, btnCancel;
     ImageView btnSetting;
-    Animation rotateOpen,rotateClose;
+    Animation rotateOpen, rotateClose;
     MyDatabaseAccess myDatabaseAccess;
 
-    @Nullable
+    //    @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_userinfo,container,false);
+//        myDatabaseAccess = new MyDatabaseAccess(getActivity());
+//        rotateOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_plus_close_rotate);
+//        rotateClose = AnimationUtils.loadAnimation(getActivity(),R.anim.fab_plus_open_rotate);
+//        btnSetting = (ImageView) view.findViewById(R.id.btn_setting);
+//
+//        btnSetting.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                btnSetting.startAnimation(rotateOpen);
+//                eventDialogSetting();
+//            }
+//        });
+//        return view;
+//    }
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_userinfo,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_userinfo, container, false);
+        return rootView;
+    }
+
+    public void onViewCreated(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         myDatabaseAccess = new MyDatabaseAccess(getActivity());
         rotateOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_plus_close_rotate);
         rotateClose = AnimationUtils.loadAnimation(getActivity(),R.anim.fab_plus_open_rotate);
         btnSetting = (ImageView) view.findViewById(R.id.btn_setting);
-
+        TaskUserInfo taskUserInfo = new TaskUserInfo();
+        taskUserInfo.CreatedStudenInfo(getActivity());
+        taskUserInfo.GetStudentInfo();
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,10 +78,9 @@ public class UserInfoFragment extends Fragment{
                 eventDialogSetting();
             }
         });
-        return view;
     }
 
-    public void eventDialogSetting(){
+    public void eventDialogSetting() {
         final Dialog dialogSetting = new Dialog(getActivity());
         dialogSetting.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogSetting.setContentView(R.layout.dialog_userinfo);
@@ -78,7 +108,7 @@ public class UserInfoFragment extends Fragment{
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        Intent intent = new Intent(getActivity(),ChangeInfoActivity.class);
+                        Intent intent = new Intent(getActivity(), ChangeInfoActivity.class);
                         startActivity(intent);
                         getActivity().finish();
                     }
@@ -104,7 +134,7 @@ public class UserInfoFragment extends Fragment{
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        Intent intent = new Intent(getActivity(),ChangePassActivity.class);
+                        Intent intent = new Intent(getActivity(), ChangePassActivity.class);
                         startActivity(intent);
                         getActivity().finish();
                     }
@@ -136,10 +166,10 @@ public class UserInfoFragment extends Fragment{
 
     }
 
-    public void outApp(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(),R.style.MyDialogTheme);
-        builder.setTitle( Html.fromHtml("<font color='#FF7F27'>Thoát</font>"));
-        builder.setMessage( Html.fromHtml("<font color='#FF7F27'>Bạn có muốn đăng xuất ?</font>"));
+    public void outApp() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.MyDialogTheme);
+        builder.setTitle(Html.fromHtml("<font color='#FF7F27'>Thoát</font>"));
+        builder.setMessage(Html.fromHtml("<font color='#FF7F27'>Bạn có muốn đăng xuất ?</font>"));
         builder.setCancelable(false);
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
 
@@ -148,7 +178,7 @@ public class UserInfoFragment extends Fragment{
 
                 myDatabaseAccess.DeleteTokens();
                 dialog.dismiss();
-                Intent intent = new Intent(getView().getContext(),LoginActivity.class);
+                Intent intent = new Intent(getView().getContext(), LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();
 

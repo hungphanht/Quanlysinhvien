@@ -41,7 +41,6 @@ public class TaskLogin {
         txtpass = (AppCompatEditText) activity.findViewById(R.id.etPassword);
         myDatabaseAccess = new MyDatabaseAccess(activity);
         rembox = (AppCompatCheckBox) activity.findViewById(R.id.cbSave);
-
         sconn = new ConnectivityReceiver();
         int slUser = myDatabaseAccess.getCountUser();
         Log.d("test", "so luong " + slUser);
