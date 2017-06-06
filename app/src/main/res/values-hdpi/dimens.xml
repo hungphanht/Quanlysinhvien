@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- all -->
+    <dimen name="textsizeTitle">45sp</dimen>
+    <!-- login-->
+    <dimen name="paddingLogin">25dp</dimen>
+    <dimen name="textsizeLogin">28dp</dimen>
+    <!-- item score-->
+    <dimen name="heightItemScore">70dp</dimen>
+    <dimen name="textsizeItemScore">20sp</dimen>
+    <!-- fragment user info -->
+    <dimen name="widthandheightSetting">55dp</dimen>
+    <dimen name="textsizeInfo">25sp</dimen>
+    <!-- fragment score -->
+    <dimen name="textsizeScore">25sp</dimen>
+    <!-- fragment diligence -->
+    <dimen name="widthandheightCalendar">45dp</dimen>
+    <dimen name="widthGo">80dp</dimen>
+    <dimen name="heightGo">50dp</dimen>
+    <!-- dialog setting -->
+    <dimen name="widthandheightContainer">500dp</dimen>
+    <dimen name="widthandheightImageItem">60dp</dimen>
+    <!-- slash screen -->
+    <dimen name="widthandheightIcon">150dp</dimen>
+    <!--change password and info -->
+    <dimen name="widthbuttonYesNo">120dp</dimen>
+    <dimen name="heightbuttonYesNo">60dp</dimen>
+</resources>

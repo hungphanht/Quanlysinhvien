@@ -1,0 +1,20 @@
+<resources>
+    <!-- login -->
+    <dimen name="marginbottomandtopEditTextLogin">8dp</dimen>
+    <dimen name="marginbottomandtopLogin">24dp</dimen>
+    <dimen name="paddingbottomandtopEditTextLogin">10dp</dimen>
+    <!-- item score-->
+    <dimen name="marginItemScore">2dp</dimen>
+    <dimen name="paddingItemScore">5dp</dimen>
+    <!-- fragment user info -->
+    <dimen name="paddingSetting">5dp</dimen>
+    <dimen name="paddingContainer">10dp</dimen>
+    <!-- fragment diligence -->
+    <dimen name="marginrightGo">20dp</dimen>
+    <!-- dialog setting -->
+    <dimen name="topandbottomItem">5dp</dimen>
+    <!-- edittext pass and info -->
+    <dimen name="paddingleftEdittext">8dp</dimen>
+    <dimen name="paddingrightEdittext">12dp</dimen>
+    <dimen name="paddingtopPassword">40dp</dimen>
+</resources>

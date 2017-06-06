@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorTran">#00ffffff</color>
+    <color name="colorDefault">#ffffff</color>
+    <color name="colorPrimary">#22324b</color>
+    <color name="colorPrimaryDark">#1e2024</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorHint">#d5d8e2</color>
+    <color name="colorLogin">#d5d8e2</color>
+    <color name="checkbox">#d5d8e2</color>
+    <color name="colorLogout">#34e219</color>
+    <color name="colorUserInfoRight">#000000</color>
+    <color name="colorBackgroundLoginOne">#22324b</color>
+    <color name="colorBackgroundLoginTwo">#22324b</color>
+    <color name="CustomColorButtonStart">#1e2024</color>
+    <color name="CustomColorButtonCenter">#1e2024</color>
+    <color name="CustomColorButtonEnd">#1e2024</color>
 </resources>

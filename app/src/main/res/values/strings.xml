@@ -1,3 +1,62 @@
 <resources>
-    <string name="app_name">QuanLySinhVien</string>
+    <string name="app_name">QLSV</string>
+    <!-- change name and password -->
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="oldpassword">Mật khẩu cũ</string>
+    <string name="newpassword">Mật khẩu mới</string>
+    <!-- tittle -->
+    <string name="Tabtittleinfo">Thông Tin</string>
+    <string name="Tabtittlescore">Điểm số</string>
+    <string name="Tabtittledd">Chuyên cần</string>
+    <string name="Tabtittledetailscore">Điểm chi tiết</string>
+    <string name="Tabtittlechangeinfo">Thay đổi thông tin</string>
+    <string name="Tabtittlechangepass">Thay đổi mật khẩu</string>
+    <!-- dialog -->
+    <string name="change_pass">Thay đổi mật khẩu </string>
+    <string name="change_info">Thay đổi thông tin sinh viên</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="cancel">Trở về</string>
+    <!-- login -->
+    <string name="login">Đăng nhập</string>
+    <string name="fragment_login_password_hint">Mật khẩu</string>
+    <string name="fragment_login_user_hint">Mã số sinh viên</string>
+    <string name="cbText">Ghi nhớ tài khoản?</string>
+    <!-- user info-->
+    <string name="Name">Họ và Tên</string>
+    <string name="MSSV">MSSV</string>
+    <string name="Phone">SĐT</string>
+    <string name="Birthday">Ngày Sinh</string>
+    <string name="PlaceOfBirth">Nơi Sinh</string>
+    <string name="Gender">Giới Tính</string>
+    <string name="Nation">Dân Tộc</string>
+    <string name="Address">Địa Chỉ</string>
+    <string name="Class">Lớp</string>
+    <!-- user info-->
+    <string name="Monhoc">Môn học</string>
+    <string name="Diemtrungbinh">Điểm trung bình</string>
+    <string name="Trangthai">Trạng thái</string>
+    <!-- score -->
+    <string name="Dk1">Định kỳ 1</string>
+    <string name="DK2">Định kỳ 2</string>
+    <string name="DK3">Định kỳ 3</string>
+    <string name="DK4">Định kỳ 4</string>
+    <string name="KT1">Kết Thúc 1</string>
+    <string name="KT2">Kết Thúc 2</string>
+    <string name="DTB">Điểm Trung Bình</string>
+    <string name="TH">Trạng Thái</string>
+
+    <string name="Ddk1">7.25</string>
+    <string name="DdK2">7.5</string>
+    <string name="DdK3">6.5</string>
+    <string name="DdK4">9.25</string>
+    <string name="DkT1">9.0</string>
+    <string name="DkT2">10.0</string>
+    <string name="DDTB">9.5</string>
+    <string name="HT">Hoàn Thành</string>
+    <!-- detail score -->
+    <string name="detailMonhoc">Môn học :</string>
+    <!-- diligence -->
+    <string name="From">Từ ngày</string>
+    <string name="To">Đến ngày</string>
 </resources>

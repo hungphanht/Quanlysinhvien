@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTran"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/widthandheightContainer"
+        android:layout_height="@dimen/widthandheightContainer"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btn_editinfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/topandbottomItem"
+            android:layout_marginTop="@dimen/topandbottomItem"
+            android:layout_weight="1"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_select_pass">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthandheightImageItem"
+                        android:layout_height="@dimen/widthandheightImageItem"
+                        android:src="@drawable/ic_edit_info" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/change_info"
+                        android:textColor="@color/checkbox"
+                        android:textSize="@dimen/textsizeScore"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_editpass"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/topandbottomItem"
+            android:layout_marginTop="@dimen/topandbottomItem"
+            android:layout_weight="1"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_select_info">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthandheightImageItem"
+                        android:layout_height="@dimen/widthandheightImageItem"
+                        android:src="@drawable/ic_edit_pass" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/change_pass"
+                        android:textColor="@color/checkbox"
+                        android:textSize="@dimen/textsizeScore"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/topandbottomItem"
+            android:layout_marginTop="@dimen/topandbottomItem"
+            android:layout_weight="1"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_select_out">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthandheightImageItem"
+                        android:layout_height="@dimen/widthandheightImageItem"
+                        android:src="@drawable/ic_logout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/logout"
+                        android:textColor="@color/checkbox"
+                        android:textSize="@dimen/textsizeScore"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/topandbottomItem"
+            android:layout_marginTop="@dimen/topandbottomItem"
+            android:layout_weight="1"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_select_cancel">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthandheightImageItem"
+                        android:layout_height="@dimen/widthandheightImageItem"
+                        android:src="@drawable/ic_cancel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:textColor="@color/checkbox"
+                        android:textSize="@dimen/textsizeScore"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
