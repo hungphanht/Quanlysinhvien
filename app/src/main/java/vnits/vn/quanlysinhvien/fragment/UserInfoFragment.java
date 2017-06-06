@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 
 import vnits.vn.quanlysinhvien.ChangeInfoActivity;
 import vnits.vn.quanlysinhvien.ChangePassActivity;
+import vnits.vn.quanlysinhvien.Database.MyDatabaseAccess;
 import vnits.vn.quanlysinhvien.LoginActivity;
 import vnits.vn.quanlysinhvien.R;
 
@@ -28,13 +29,13 @@ public class UserInfoFragment extends Fragment{
     LinearLayout btnChangeInfo,btnChangePass,btnLogout,btnCancel;
     ImageView btnSetting;
     Animation rotateOpen,rotateClose;
-
+    MyDatabaseAccess myDatabaseAccess;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_userinfo,container,false);
-
+        myDatabaseAccess = new MyDatabaseAccess(getActivity());
         rotateOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_plus_close_rotate);
         rotateClose = AnimationUtils.loadAnimation(getActivity(),R.anim.fab_plus_open_rotate);
         btnSetting = (ImageView) view.findViewById(R.id.btn_setting);
@@ -121,6 +122,7 @@ public class UserInfoFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 outApp();
+                dialogSetting.dismiss();
             }
         });
 
@@ -139,28 +141,27 @@ public class UserInfoFragment extends Fragment{
         builder.setTitle( Html.fromHtml("<font color='#FF7F27'>Thoát</font>"));
         builder.setMessage( Html.fromHtml("<font color='#FF7F27'>Bạn có muốn đăng xuất ?</font>"));
         builder.setCancelable(false);
-
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
+
+                myDatabaseAccess.DeleteTokens();
+                dialog.dismiss();
                 Intent intent = new Intent(getView().getContext(),LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();
-                dialog.dismiss();
+
             }
         });
-
         builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 btnSetting.startAnimation(rotateClose);
                 dialog.dismiss();
             }
         });
-
         AlertDialog alert = builder.create();
         alert.show();
     }
