@@ -29,7 +29,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Recycler
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.txtMonHoc.setText(listData.get(position).getMonhoc());
         holder.txtTrangThai.setText(listData.get(position).getTrangthai());
-        holder.txtDiem.setText(listData.get(position).getDtb());
+        holder.txtDiem.setText(listData.get(position).getDtb().toString());
     }
     @Override
     public int getItemCount() {

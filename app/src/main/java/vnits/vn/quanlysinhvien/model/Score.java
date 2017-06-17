@@ -5,16 +5,24 @@ package vnits.vn.quanlysinhvien.model;
  */
 
 public class Score {
-    private String monhoc,dtb,trangthai;
-
-    public Score(){
-
+    public int getId() {
+        return id;
     }
 
-    public Score(String monhoc, String dtb, String trangthai) {
-        this.monhoc = monhoc;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
+    private String monhoc,trangthai;
+    private Double dtb;
+
+    public Double getDtb() {
+        return dtb;
+    }
+
+    public void setDtb(Double dtb) {
         this.dtb = dtb;
-        this.trangthai = trangthai;
     }
 
     public String getMonhoc() {
@@ -25,13 +33,6 @@ public class Score {
         this.monhoc = monhoc;
     }
 
-    public String getDtb() {
-        return dtb;
-    }
-
-    public void setDtb(String dtb) {
-        this.dtb = dtb;
-    }
 
     public String getTrangthai() {
         return trangthai;
@@ -40,6 +41,9 @@ public class Score {
     public void setTrangthai(String trangthai) {
         this.trangthai = trangthai;
     }
+
+
+
 
     @Override
     public String toString() {

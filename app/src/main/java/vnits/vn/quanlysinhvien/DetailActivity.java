@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import vnits.vn.quanlysinhvien.Task.TaskDetailScore;
 import vnits.vn.quanlysinhvien.config.ConfigApplication;
 
 
@@ -21,6 +22,9 @@ public class DetailActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_score);
         LinearLayout btnBack = (LinearLayout) findViewById(R.id.btnback);
+        TaskDetailScore taskDetailScore = new TaskDetailScore();
+        taskDetailScore.CreatedScoreDetail(this);
+        taskDetailScore.GetDetailScore();
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

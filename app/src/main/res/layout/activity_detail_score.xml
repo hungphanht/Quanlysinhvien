@@ -82,11 +82,12 @@
             android:orientation="horizontal">
 
             <TextView
-                android:textSize="@dimen/textsizeScore"
+                android:id="@+id/txtMonHoc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hoa1"
-                android:textColor="@color/colorLogin"
+                android:hint="Hoa1"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textsizeScore"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -128,10 +129,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtDk1"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Ddk1"
+                    android:hint="@string/Ddk1"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -165,10 +167,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtDk2"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DdK2"
+                    android:hint="@string/DdK2"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -202,10 +205,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtDk3"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DdK3"
+                    android:hint="@string/DdK3"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -239,10 +243,122 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtDk4"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DdK4"
+                    android:hint="@string/DdK4"
+                    android:textColor="@color/colorUserInfoRight"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/borderbottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left">
+
+                <TextView
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DK5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDk5"
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/DdK3"
+                    android:textColor="@color/colorUserInfoRight"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/borderbottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left">
+
+                <TextView
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DK6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDk6"
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/DdK3"
+                    android:textColor="@color/colorUserInfoRight"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/borderbottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left">
+
+                <TextView
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DK7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDk7"
+                    android:textSize="@dimen/textsizeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/DdK3"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -276,10 +392,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtKt1"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DkT1"
+                    android:hint="@string/DkT1"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -313,10 +430,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtKt2"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DkT2"
+                    android:hint="@string/DkT2"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -350,63 +468,65 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtAvg"
                     android:textSize="@dimen/textsizeInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DDTB"
+                    android:hint="@string/DDTB"
                     android:textColor="@color/colorUserInfoRight"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:orientation="horizontal">-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|left">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center|left">-->
 
-                <TextView
-                    android:textSize="@dimen/textsizeInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/TH" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:textSize="@dimen/textsizeInfo"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/TH" />-->
+            <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|right"
-                android:orientation="horizontal">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center|right"-->
+                <!--android:orientation="horizontal">-->
 
-                <TextView
-                    android:textSize="@dimen/textsizeInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/HT"
-                    android:textColor="@color/colorUserInfoRight"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
+                <!--<TextView-->
+                    <!--android:id="@+id/txtTrangThai"-->
+                    <!--android:textSize="@dimen/textsizeInfo"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="@string/HT"-->
+                    <!--android:textColor="@color/colorUserInfoRight"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/main_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_primary"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@android:color/transparent"
-            app:tabMode="fixed" />
-    </LinearLayout>
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/main_tabs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/background_primary"-->
+            <!--app:tabGravity="fill"-->
+            <!--app:tabIndicatorColor="@android:color/transparent"-->
+            <!--app:tabMode="fixed" />-->
+    <!--</LinearLayout>-->
 </LinearLayout>

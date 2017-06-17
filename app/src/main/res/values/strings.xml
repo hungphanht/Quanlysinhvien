@@ -59,4 +59,8 @@
     <!-- diligence -->
     <string name="From">Từ ngày</string>
     <string name="To">Đến ngày</string>
+    <string name="DK7">Định kỳ 7</string>
+    <string name="DK6">Định kỳ 6</string>
+    <string name="DK5">Định kỳ 5</string>
+    <string name="renewpassword">Nhập lại mật khẩu mới</string>
 </resources>
