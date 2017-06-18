@@ -57,8 +57,9 @@
         android:paddingLeft="@dimen/paddingContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="0.5"
         android:orientation="vertical">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_weight="1"
@@ -83,6 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <EditText
+                    android:password="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/background_edittext"
@@ -114,6 +116,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <EditText
+                    android:password="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:paddingLeft="@dimen/paddingleftEdittext"
+                    android:paddingRight="@dimen/paddingrightEdittext"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:textSize="@dimen/textsizeInfo"
+                    android:text="@string/newpassword"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <EditText
+                    android:password="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/background_edittext"
@@ -126,7 +161,7 @@
         android:paddingTop="@dimen/paddingtopPassword"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="0.6"
         android:orientation="horizontal">
         <LinearLayout
             android:gravity="center|top"

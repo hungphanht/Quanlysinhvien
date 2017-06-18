@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import vnits.vn.quanlysinhvien.R;
 import vnits.vn.quanlysinhvien.model.Score;
 
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.RecyclerViewHolder> {
+public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.RecyclerViewHolder> {
 
     private ArrayList<Score> listData = new ArrayList<>();
 
-    public RecycleAdapter(ArrayList<Score> listData) {
+    public ScoreAdapter(ArrayList<Score> listData) {
         this.listData = listData;
     }
     @Override

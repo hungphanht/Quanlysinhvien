@@ -32,24 +32,6 @@ public class UserInfoFragment extends Fragment {
     Animation rotateOpen, rotateClose;
     MyDatabaseAccess myDatabaseAccess;
 
-    //    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_userinfo,container,false);
-//        myDatabaseAccess = new MyDatabaseAccess(getActivity());
-//        rotateOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_plus_close_rotate);
-//        rotateClose = AnimationUtils.loadAnimation(getActivity(),R.anim.fab_plus_open_rotate);
-//        btnSetting = (ImageView) view.findViewById(R.id.btn_setting);
-//
-//        btnSetting.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                btnSetting.startAnimation(rotateOpen);
-//                eventDialogSetting();
-//            }
-//        });
-//        return view;
-//    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_userinfo, container, false);

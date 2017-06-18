@@ -36,6 +36,10 @@
     <string name="Monhoc">Môn học</string>
     <string name="Diemtrungbinh">Điểm trung bình</string>
     <string name="Trangthai">Trạng thái</string>
+    <!-- diligence -->
+    <string name="Chieu">Chiều</string>
+    <string name="Ngay">Ngày</string>
+    <string name="Sang">Sáng</string>
     <!-- score -->
     <string name="Dk1">Định kỳ 1</string>
     <string name="DK2">Định kỳ 2</string>

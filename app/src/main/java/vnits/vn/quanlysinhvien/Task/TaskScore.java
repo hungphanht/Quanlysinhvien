@@ -1,16 +1,14 @@
 package vnits.vn.quanlysinhvien.Task;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -19,11 +17,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 import vnits.vn.quanlysinhvien.API.SettingApi;
 import vnits.vn.quanlysinhvien.Database.MyDatabaseAccess;
 import vnits.vn.quanlysinhvien.DetailActivity;
 import vnits.vn.quanlysinhvien.R;
-import vnits.vn.quanlysinhvien.adapter.RecycleAdapter;
+import vnits.vn.quanlysinhvien.adapter.ScoreAdapter;
 import vnits.vn.quanlysinhvien.broadcast.ConnectivityReceiver;
 import vnits.vn.quanlysinhvien.custom.RecyclerItemClickListener;
 import vnits.vn.quanlysinhvien.model.Score;
@@ -31,15 +31,15 @@ import vnits.vn.quanlysinhvien.model.Users;
 
 public class TaskScore {
     RecyclerView recyclerView;
-    RecycleAdapter adapter;
+    ScoreAdapter adapter;
     private ArrayList<Score> arrdata = new ArrayList<Score>();
     MyDatabaseAccess myDatabaseAccess;
     Activity activity;
     boolean checkconn;
     ConnectivityReceiver sconn;
     dowloadJson getJson;
-    ProgressDialog Dialog;
     String UrlSCore;
+    ACProgressFlower progressDialog;
 
     public void CreatedScore(Activity getActivity) {
         activity = getActivity;
@@ -51,7 +51,7 @@ public class TaskScore {
         LinearLayoutManager layoutManager = new LinearLayoutManager(activity);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new RecycleAdapter(arrdata);
+        adapter = new ScoreAdapter(arrdata);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(activity, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
@@ -82,10 +82,12 @@ public class TaskScore {
             activity.runOnUiThread((new Runnable() {
                 @Override
                 public void run() {
-                    Dialog = new ProgressDialog(activity);
-                    Dialog.setTitle("Đang tải giữ liệu");
-                    Dialog.setMessage("Loading...");
-                    Dialog.show();
+                    progressDialog = new ACProgressFlower.Builder(activity)
+                            .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                            .themeColor(Color.WHITE)
+                            .text("Loading")
+                            .fadeColor(Color.DKGRAY).build();
+                    progressDialog.show();
                     // TODO Auto-generated method stub
                     new TaskScore.AsytaskGet().execute(UrlSCore);
                 }
@@ -110,7 +112,7 @@ public class TaskScore {
 
         protected void onPostExecute(String res) {
             ExGetScore(res);
-            Dialog.dismiss();
+            progressDialog.dismiss();
         }
     }
 

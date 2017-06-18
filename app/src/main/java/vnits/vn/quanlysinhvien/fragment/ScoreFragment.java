@@ -1,28 +1,14 @@
 package vnits.vn.quanlysinhvien.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-
-import vnits.vn.quanlysinhvien.DetailActivity;
 import vnits.vn.quanlysinhvien.R;
 import vnits.vn.quanlysinhvien.Task.TaskScore;
-import vnits.vn.quanlysinhvien.adapter.RecycleAdapter;
-import vnits.vn.quanlysinhvien.custom.RecyclerItemClickListener;
-import vnits.vn.quanlysinhvien.model.Score;
 
 public class ScoreFragment extends Fragment{
 

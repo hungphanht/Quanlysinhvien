@@ -1,7 +1,7 @@
 package vnits.vn.quanlysinhvien.Task;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
@@ -10,6 +10,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 import vnits.vn.quanlysinhvien.API.SettingApi;
 import vnits.vn.quanlysinhvien.Database.MyDatabaseAccess;
 import vnits.vn.quanlysinhvien.R;
@@ -29,7 +31,8 @@ public class TaskUserInfo {
     boolean checkconn;
     ConnectivityReceiver sconn;
     dowloadJson getJson;
-    ProgressDialog Dialog;
+    ACProgressFlower progressDialog;
+
     public void CreatedStudenInfo(Activity getActivity) {
         activity = getActivity;
         txtifHoTen = (TextView) activity.findViewById(R.id.txtifHoTen);
@@ -57,10 +60,12 @@ public class TaskUserInfo {
             activity.runOnUiThread((new Runnable() {
                 @Override
                 public void run() {
-                    Dialog = new ProgressDialog(activity);
-                    Dialog.setTitle("Đang tải giữ liệu");
-                    Dialog.setMessage("Loading...");
-                    Dialog.show();
+                    progressDialog = new ACProgressFlower.Builder(activity)
+                            .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                            .themeColor(Color.WHITE)
+                            .text("Loading")
+                            .fadeColor(Color.DKGRAY).build();
+                    progressDialog.show();
                     // TODO Auto-generated method stub
                     new AsytaskGet().execute(UrlStudentInfo);
 
@@ -83,7 +88,7 @@ public class TaskUserInfo {
         }
         protected void onPostExecute(String res) {
             ExGetInfo(res);
-            Dialog.dismiss();
+            progressDialog.dismiss();
         }
     }
     public void ExGetInfo(String  input){
